@@ -2040,101 +2040,69 @@ button {
   object-fit: cover;
 }
 
-/* Project Index */
+/* Project Index Grid */
 .project-index {
-  max-width: var(--container-max);
-  margin: var(--space-2xl) auto;
-  padding: 0 var(--container-padding);
+  margin-top: 6rem;
+  width: 100%;
 }
-.pi-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-light);
-  cursor: pointer;
-  position: relative;
-}
-.pi-item:first-child {
-  border-top: 1px solid var(--border-light);
-}
-.pi-left {
-  display: flex;
-  align-items: center;
+.pi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
+}
+.pi-grid-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-elegant);
+}
+.pi-grid-item:hover {
+  transform: translateY(-8px);
+}
+.pi-grid-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  filter: grayscale(20%);
+  transition: filter 0.4s ease;
+}
+.pi-grid-item:hover img {
+  filter: grayscale(0%);
 }
 .pi-num {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--accent);
-  opacity: 0.5;
-  width: 40px;
+  opacity: 0.6;
+  margin-bottom: 0.25rem;
 }
 .pi-title {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--text-primary);
-  transition: transform 0.4s var(--ease-elegant);
+  line-height: 1.2;
 }
-.pi-category {
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  text-align: right;
+
+@media (max-width: 768px) {
+  .pi-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .pi-title {
+    font-size: 1.2rem;
+  }
 }
-.pi-item:hover .pi-title {
-  transform: translateX(10px);
-  color: var(--accent);
-}
-.pi-img-preview {
-  position: absolute;
-  top: 50%;
-  right: 25%;
-  transform: translateY(-50%) scale(0.9);
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s var(--ease-elegant);
-  z-index: 10;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-.pi-item:hover .pi-img-preview {
-  opacity: 1;
-  transform: translateY(-50%) scale(1);
+
+@media (max-width: 480px) {
+  .pi-grid {
+    grid-template-columns: 1fr;
+  }
 }
 /* Ensure all technical drawings and PNG assets blend beautifully */
 .project-detail img[src*=".png"] {
   mix-blend-mode: multiply;
 }
 /* Except the moodboard and some specific ones if they exist, but generally PNGs in this project are drawings or transparent elements */
-/* PROJECT INDEX FIXES */
-.project-index {
-  max-width: 100% !important;
-  margin: 6rem 0 0 0 !important;
-  padding: 0 !important;
-}
 
-@media (max-width: 768px) {
-  .pi-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  .pi-left {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .pi-category {
-    text-align: left;
-    margin-left: calc(40px + 2rem); /* align with title */
-  }
-  .pi-img-preview {
-    display: none !important;
-  }
-  .pi-title {
-    font-size: 1.5rem;
-  }
-}
