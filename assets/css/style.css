@@ -2110,3 +2110,31 @@ button {
   mix-blend-mode: multiply;
 }
 /* Except the moodboard and some specific ones if they exist, but generally PNGs in this project are drawings or transparent elements */
+/* PROJECT INDEX FIXES */
+.project-index {
+  max-width: 100% !important;
+  margin: 6rem 0 0 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .pi-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .pi-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .pi-category {
+    text-align: left;
+    margin-left: calc(40px + 2rem); /* align with title */
+  }
+  .pi-img-preview {
+    display: none !important;
+  }
+  .pi-title {
+    font-size: 1.5rem;
+  }
+}
