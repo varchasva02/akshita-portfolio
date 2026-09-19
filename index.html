@@ -55,14 +55,21 @@
   </div>
 
   <!-- ════════════════ HERO ════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero__content hero__content--centered">
-      <h1 class="hero__name--cover">AKSHITA SOMANI</h1>
-      <div class="hero__image-wrapper--cover">
-        <img src="assets/images/intro.png?v=4"
-          alt="Architectural section drawing — Dharohar residential project by Akshita Somani"
-          class="hero__image--cover">
-        <p class="hero__tagline--cover">Dancing Through Designs for a Better Tomorrow</p>
+  <section class="hero" id="hero" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 4rem;">
+    <div class="hero__content hero__content--centered" style="max-width: 100%; padding: 0;">
+      <h1 class="text-editorial-huge reveal" style="text-align: center; margin-bottom: 2rem;">AKSHITA<br>SOMANI</h1>
+      
+      <div class="hero__meta reveal stagger-1" style="display: flex; justify-content: space-between; width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding) 2rem;">
+        <span class="text-overline" style="text-align: left;">Interior Design Student<br>Dehradun · India</span>
+        <span class="text-overline" style="text-align: right;">SELECTED WORK<br>2023—2026</span>
+      </div>
+
+      <div class="full-image reveal stagger-2" style="margin: 0 auto; max-width: var(--container-max); padding: 0 var(--container-padding);">
+        <img src="assets/images/page004_img000_1920x1080.jpg" alt="Portfolio Highlight" style="aspect-ratio: 21/9; object-fit: cover; width: 100%;">
+      </div>
+
+      <div class="hero__scroll reveal stagger-3" style="text-align: center; margin-top: 3rem;">
+        <span class="text-overline">SCROLL TO EXPLORE ↓</span>
       </div>
     </div>
   </section>
@@ -147,125 +154,128 @@
         <div class="divider divider--center"></div>
       </div>
 
-      <!-- PROJECT 01 — DHAROHAR -->
-      <div class="project-card reveal" data-project="dharohar">
-        <div class="project-card__image-wrapper">
-          <img src="assets/images/page004_img000_1920x1080.jpg" alt="Dharohar — Residential interior render"
-            class="project-card__image" loading="lazy">
-          <div class="project-card__overlay"></div>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__number">01</span>
-          <h3 class="project-card__name">Dharohar</h3>
-          <p class="project-card__category">Design of Domestic Interior & Landscaping</p>
-          <div class="project-card__meta">
-            <div class="project-card__meta-item">
-              <span>Area</span>2700 sq. ft
+      <div class="editorial-grid">
+        <!-- PROJECT 01 — DHAROHAR -->
+        <div class="ed-card ed-card--full reveal" data-project="dharohar" style="cursor: pointer;">
+          <img src="assets/images/page004_img000_1920x1080.jpg" alt="Dharohar" class="ed-image" loading="lazy">
+          <div class="ed-info" style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <span class="ed-number">01</span>
+              <h3 class="ed-title">DHAROHAR</h3>
+              <p class="ed-meta">DOMESTIC INTERIOR & LANDSCAPING · 2700 SQ.FT · DEHRADUN</p>
             </div>
-            <div class="project-card__meta-item">
-              <span>Location</span>Dehradun, India
-            </div>
+            <span class="project-card__link">EXPLORE <span class="arrow">→</span></span>
           </div>
-          <p class="project-card__description">The objective was to transform a single-storied residential structure in
-            Dehradun into a personalized "home" for a family of four.</p>
-          <span class="project-card__link">VIEW PROJECT <span class="arrow">→</span></span>
+        </div>
+
+        <!-- VISUAL STRIP 1 -->
+        <div class="image-strip reveal stagger-1">
+          <div class="image-strip__item"><img src="assets/images/page005_img001_410x615.jpg" alt="Material" loading="lazy"></div>
+          <div class="image-strip__item"><img src="assets/images/fixed_page007_img000.png" alt="Drawing" class="img-blend-multiply" style="object-fit: contain; padding: 2rem; background: #fff;" loading="lazy"></div>
+          <div class="image-strip__item"><img src="assets/images/page008_img001_1536x864.jpg" alt="Render" loading="lazy"></div>
+        </div>
+
+        <!-- PROJECT 02 — RESILIENCE -->
+        <div class="ed-card ed-card--split reveal" data-project="resilience" style="cursor: pointer;">
+          <img src="assets/images/page009_img000_1440x810.jpg" alt="Redesigning for Resilience" class="ed-image" loading="lazy">
+          <div class="ed-info">
+            <span class="ed-number">02</span>
+            <h3 class="ed-title">REDESIGNING FOR RESILIENCE</h3>
+            <p class="ed-meta">SPECIAL INTERIORS · 2700 SQ.FT</p>
+            <p class="body-text" style="margin-bottom: 2rem;">Designing a safe, accessible, and emotionally supportive home for a multi-generational family.</p>
+            <span class="project-card__link">EXPLORE <span class="arrow">→</span></span>
+          </div>
+        </div>
+
+        <!-- VISUAL STRIP 2 -->
+        <div class="image-strip reveal stagger-1">
+          <div class="image-strip__item"><img src="assets/images/resilience-users.png" alt="Users" style="object-fit: contain; padding: 2rem; background: #fff;" loading="lazy"></div>
+          <div class="image-strip__item"><img src="assets/images/page015_img001_2256x1596.jpg" alt="Details" loading="lazy"></div>
+        </div>
+
+        <!-- PROJECT 03 — BUILDSPACE -->
+        <div class="ed-card ed-card--overlap reveal" data-project="buildspace" style="cursor: pointer;">
+          <img src="assets/images/page018_img000_1505x847.jpg" alt="Buildspace" class="ed-image ed-image-main" loading="lazy">
+          <img src="assets/images/page019_img001_569x576.jpg" alt="Detail" class="ed-image ed-image-sub" loading="lazy">
+          <div class="ed-info" style="margin-top: 2rem;">
+            <span class="ed-number">03</span>
+            <h3 class="ed-title">BUILDSPACE</h3>
+            <p class="ed-meta">COMMERCIAL · 3000 SQ.FT</p>
+            <span class="project-card__link">EXPLORE <span class="arrow">→</span></span>
+          </div>
+        </div>
+
+        <!-- PROJECT 04 — INC.5 -->
+        <div class="ed-card ed-card--split-rev reveal" data-project="inc5" style="cursor: pointer; margin-top: 6rem;">
+          <img src="assets/images/page025_img000_1383x922.jpg" alt="INC.5" class="ed-image" loading="lazy">
+          <div class="ed-info">
+            <span class="ed-number">04</span>
+            <h3 class="ed-title">INC.5</h3>
+            <p class="ed-meta">RETAIL SPACE · 1400 SQ.FT</p>
+            <p class="body-text" style="margin-bottom: 2rem;">An immersive retail store reflecting comfort, elegance, and contemporary fashion.</p>
+            <span class="project-card__link">EXPLORE <span class="arrow">→</span></span>
+          </div>
+        </div>
+
+        <!-- PROJECT 05 — TABLE -->
+        <div class="ed-card reveal" data-project="table" style="cursor: pointer; margin-top: 8rem; align-items: center; text-align: center;">
+          <img src="assets/images/page032_img000_1448x1086.jpg" alt="Study Table" class="ed-image" style="width: 70%; aspect-ratio: 4/3;" loading="lazy">
+          <div class="ed-info" style="margin-top: 2rem;">
+            <span class="ed-number">05</span>
+            <h3 class="ed-title">FOLDING STUDY TABLE</h3>
+            <p class="ed-meta">FURNITURE DESIGN</p>
+            <span class="project-card__link">EXPLORE <span class="arrow">→</span></span>
+          </div>
         </div>
       </div>
 
-      <!-- PROJECT 02 — REDESIGNING FOR RESILIENCE -->
-      <div class="project-card project-card--reverse reveal" data-project="resilience">
-        <div class="project-card__image-wrapper">
-          <img src="assets/images/page009_img000_1440x810.jpg" alt="Redesigning for Resilience — Accessible home render"
-            class="project-card__image" loading="lazy">
-          <div class="project-card__overlay"></div>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__number">02</span>
-          <h3 class="project-card__name">Redesigning for Resilience</h3>
-          <p class="project-card__category">Design for Special Interiors</p>
-          <div class="project-card__meta">
-            <div class="project-card__meta-item">
-              <span>Area</span>2700 sq. ft
-            </div>
-            <div class="project-card__meta-item">
-              <span>Location</span>Dehradun, India
-            </div>
+      <!-- ════════════════ PROJECT INDEX ════════════════ -->
+      <div class="project-index reveal">
+        <h3 class="text-overline" style="margin-bottom: 2rem;">Index</h3>
+        
+        <div class="pi-item" data-project="dharohar">
+          <div class="pi-left">
+            <span class="pi-num">01</span>
+            <span class="pi-title">Dharohar</span>
           </div>
-          <p class="project-card__description">Designing a safe, accessible, and emotionally supportive home for a
-            multi-generational family with diverse physical and cognitive needs.</p>
-          <span class="project-card__link">VIEW PROJECT <span class="arrow">→</span></span>
+          <span class="pi-category">Domestic Interior</span>
+          <img src="assets/images/page004_img000_1920x1080.jpg" class="pi-img-preview" alt="Preview">
         </div>
-      </div>
+        
+        <div class="pi-item" data-project="resilience">
+          <div class="pi-left">
+            <span class="pi-num">02</span>
+            <span class="pi-title">Redesigning for Resilience</span>
+          </div>
+          <span class="pi-category">Special Interiors</span>
+          <img src="assets/images/page009_img000_1440x810.jpg" class="pi-img-preview" alt="Preview">
+        </div>
+        
+        <div class="pi-item" data-project="buildspace">
+          <div class="pi-left">
+            <span class="pi-num">03</span>
+            <span class="pi-title">Buildspace</span>
+          </div>
+          <span class="pi-category">Commercial Space</span>
+          <img src="assets/images/page018_img000_1505x847.jpg" class="pi-img-preview" alt="Preview">
+        </div>
 
-      <!-- PROJECT 03 — BUILDSPACE -->
-      <div class="project-card reveal" data-project="buildspace">
-        <div class="project-card__image-wrapper">
-          <img src="assets/images/page018_img000_1505x847.jpg" alt="Buildspace — Contemporary office render"
-            class="project-card__image" loading="lazy">
-          <div class="project-card__overlay"></div>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__number">03</span>
-          <h3 class="project-card__name">Buildspace</h3>
-          <p class="project-card__category">Design of Commercial Spaces</p>
-          <div class="project-card__meta">
-            <div class="project-card__meta-item">
-              <span>Area</span>3000 sq. ft
-            </div>
-            <div class="project-card__meta-item">
-              <span>Location</span>Dehradun, India
-            </div>
+        <div class="pi-item" data-project="inc5">
+          <div class="pi-left">
+            <span class="pi-num">04</span>
+            <span class="pi-title">INC.5</span>
           </div>
-          <p class="project-card__description">Transforming a commercial interior in Dehradun into a modern office
-            environment for a real estate development company.</p>
-          <span class="project-card__link">VIEW PROJECT <span class="arrow">→</span></span>
+          <span class="pi-category">Retail Space</span>
+          <img src="assets/images/page025_img000_1383x922.jpg" class="pi-img-preview" alt="Preview">
         </div>
-      </div>
 
-      <!-- PROJECT 04 — INC.5 -->
-      <div class="project-card project-card--reverse reveal" data-project="inc5">
-        <div class="project-card__image-wrapper">
-          <img src="assets/images/page025_img000_1383x922.jpg" alt="INC.5 — Retail store render with flowing forms"
-            class="project-card__image" loading="lazy">
-          <div class="project-card__overlay"></div>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__number">04</span>
-          <h3 class="project-card__name">INC.5</h3>
-          <p class="project-card__category">Design of Retail Space & Visual Merchandising</p>
-          <div class="project-card__meta">
-            <div class="project-card__meta-item">
-              <span>Area</span>1200–1400 sq. ft
-            </div>
-            <div class="project-card__meta-item">
-              <span>Location</span>Rajpur Road, Dehradun
-            </div>
+        <div class="pi-item" data-project="table">
+          <div class="pi-left">
+            <span class="pi-num">05</span>
+            <span class="pi-title">Folding Study Table</span>
           </div>
-          <p class="project-card__description">Designing an immersive retail store for the footwear brand INC.5,
-            reflecting comfort, elegance, and contemporary fashion.</p>
-          <span class="project-card__link">VIEW PROJECT <span class="arrow">→</span></span>
-        </div>
-      </div>
-
-      <!-- PROJECT 05 — WALL-MOUNTED FOLDING STUDY TABLE -->
-      <div class="project-card reveal" data-project="table">
-        <div class="project-card__image-wrapper">
-          <img src="assets/images/page032_img000_1448x1086.jpg" alt="Wall-Mounted Folding Study Table — Product design"
-            class="project-card__image" loading="lazy">
-          <div class="project-card__overlay"></div>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__number">05</span>
-          <h3 class="project-card__name">Wall-Mounted Folding Study Table</h3>
-          <p class="project-card__category">Stacking & Folding Furniture</p>
-          <div class="project-card__meta">
-            <div class="project-card__meta-item">
-              <span>Area</span>120 sq. ft
-            </div>
-          </div>
-          <p class="project-card__description">A flexible and ergonomic workspace that maximizes space efficiency
-            through a transformable furniture system.</p>
-          <span class="project-card__link">VIEW PROJECT <span class="arrow">→</span></span>
+          <span class="pi-category">Furniture Design</span>
+          <img src="assets/images/page032_img000_1448x1086.jpg" class="pi-img-preview" alt="Preview">
         </div>
       </div>
     </div>
@@ -1060,6 +1070,67 @@
       <div></div>
     </div>
   </div>
+
+  <!-- ════════════════ PROCESS STORY ════════════════ -->
+  <section class="process" id="process" style="padding: 6rem 0; border-top: 1px solid var(--border-light);">
+    <div class="process__header reveal" style="text-align: center; margin-bottom: 4rem;">
+      <span class="label label--accent">Methodology</span>
+      <h2 class="section-title" style="margin-top: 1rem;">THE PROCESS</h2>
+      <div class="divider divider--center"></div>
+    </div>
+    
+    <div class="process-story">
+      <div class="process-step reveal">
+        <div class="process-step__info">
+          <span class="process-step__number">01</span>
+          <h3 class="process-step__title">UNDERSTAND</h3>
+          <p class="process-step__meta">CONTEXT & REQUIREMENTS</p>
+          <p class="body-text">Analyzing the spatial constraints, user needs, and environmental context before drawing a single line.</p>
+        </div>
+        <img src="assets/images/resilience-users.png" class="process-step__img img-blend-multiply" style="object-fit: contain; padding: 2rem;" alt="User analysis" loading="lazy">
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-step__info">
+          <span class="process-step__number">02</span>
+          <h3 class="process-step__title">EXPLORE</h3>
+          <p class="process-step__meta">SKETCHING & IDEATION</p>
+          <p class="body-text">Rapid physical and digital prototyping to test spatial arrangements and material palettes.</p>
+        </div>
+        <img src="assets/images/page015_img000_1536x864.jpg" class="process-step__img" alt="Exploration sketches" loading="lazy">
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-step__info">
+          <span class="process-step__number">03</span>
+          <h3 class="process-step__title">DEVELOP</h3>
+          <p class="process-step__meta">TECHNICAL RESOLUTION</p>
+          <p class="body-text">Translating concepts into precise architectural drawings, plans, and sections.</p>
+        </div>
+        <img src="assets/images/fixed_page007_img000.png" class="process-step__img img-blend-multiply" style="object-fit: contain;" alt="Technical plan" loading="lazy">
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-step__info">
+          <span class="process-step__number">04</span>
+          <h3 class="process-step__title">RESOLVE</h3>
+          <p class="process-step__meta">MATERIALS & TEXTURES</p>
+          <p class="body-text">Curating finishes, lighting, and textiles to construct the physical atmosphere of the space.</p>
+        </div>
+        <img src="assets/images/page005_img001_410x615.jpg" class="process-step__img" alt="Material board" loading="lazy" style="object-fit: cover;">
+      </div>
+
+      <div class="process-step reveal">
+        <div class="process-step__info">
+          <span class="process-step__number">05</span>
+          <h3 class="process-step__title">EXPERIENCE</h3>
+          <p class="process-step__meta">FINAL VISUALIZATION</p>
+          <p class="body-text">Crafting photorealistic renders to communicate the final environment, lighting, and materiality.</p>
+        </div>
+        <img src="assets/images/page008_img001_1536x864.jpg" class="process-step__img" alt="Final render" loading="lazy">
+      </div>
+    </div>
+  </section>
 
   <!-- ════════════════ VISUAL ARCHIVE ════════════════ -->
   <section class="visual-archive section--large" id="archive">

@@ -1827,3 +1827,286 @@ button {
   50% { left: 0; }
   100% { left: 100%; }
 }
+/* -- Added Redesign CSS -- */
+
+/* Typography */
+.text-overline {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.text-editorial-huge {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 0.95;
+}
+
+/* Image Strips */
+.image-strip {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+  margin: var(--space-2xl) 0;
+  padding: 0 var(--container-padding);
+}
+.image-strip__item {
+  flex: 1;
+  height: 35vh;
+  min-height: 250px;
+}
+.image-strip__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Asymmetric Editorial Cards */
+.editorial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-xl) 0;
+}
+
+.ed-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+.ed-card--full .ed-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.ed-card--split {
+  flex-direction: row;
+  align-items: center;
+  gap: 5vw;
+}
+.ed-card--split .ed-image {
+  flex: 1.5;
+  aspect-ratio: 4/5;
+}
+.ed-card--split .ed-info {
+  flex: 1;
+}
+.ed-card--split-rev {
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5vw;
+}
+.ed-card--split-rev .ed-image {
+  flex: 1;
+  aspect-ratio: 3/4;
+}
+.ed-card--split-rev .ed-info {
+  flex: 1;
+}
+.ed-card--overlap {
+  align-items: flex-end;
+}
+.ed-card--overlap .ed-image-main {
+  width: 85%;
+  aspect-ratio: 16/9;
+}
+.ed-card--overlap .ed-image-sub {
+  width: 35%;
+  aspect-ratio: 3/4;
+  margin-top: -15%;
+  margin-right: 15%;
+  z-index: 2;
+  border: 10px solid var(--bg-primary);
+}
+.ed-card--overlap .ed-info {
+  align-self: flex-start;
+  margin-top: -5%;
+  z-index: 3;
+}
+
+.ed-image {
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-elegant);
+}
+.ed-card:hover .ed-image {
+  transform: scale(1.02);
+}
+.ed-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.ed-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+.ed-meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Technical Drawings */
+.tech-drawing {
+  width: 100%;
+  max-width: 80%;
+  margin: var(--space-xl) auto;
+  position: relative;
+}
+.tech-drawing img {
+  width: 100%;
+  display: block;
+  mix-blend-mode: multiply;
+}
+.tech-drawing__label {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.tech-drawing__label::after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Process Story */
+.process-story {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--container-padding);
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+.process-step:nth-child(even) {
+  grid-template-columns: 1.5fr 1fr;
+}
+.process-step:nth-child(even) .process-step__info {
+  order: 2;
+}
+.process-step__number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent);
+  opacity: 0.4;
+  line-height: 1;
+}
+.process-step__title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.process-step__meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.process-step__img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+/* Project Index */
+.project-index {
+  max-width: var(--container-max);
+  margin: var(--space-2xl) auto;
+  padding: 0 var(--container-padding);
+}
+.pi-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  position: relative;
+}
+.pi-item:first-child {
+  border-top: 1px solid var(--border-light);
+}
+.pi-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.pi-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  opacity: 0.5;
+  width: 40px;
+}
+.pi-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-primary);
+  transition: transform 0.4s var(--ease-elegant);
+}
+.pi-category {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: right;
+}
+.pi-item:hover .pi-title {
+  transform: translateX(10px);
+  color: var(--accent);
+}
+.pi-img-preview {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%) scale(0.9);
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s var(--ease-elegant);
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.pi-item:hover .pi-img-preview {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+/* Ensure all technical drawings and PNG assets blend beautifully */
+.project-detail img[src*=".png"] {
+  mix-blend-mode: multiply;
+}
+/* Except the moodboard and some specific ones if they exist, but generally PNGs in this project are drawings or transparent elements */
